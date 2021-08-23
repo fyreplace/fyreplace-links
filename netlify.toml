@@ -1,0 +1,6 @@
+[build]
+  command = "make"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
