@@ -1,0 +1,21 @@
+{
+    "applinks": {
+        "details": [
+            {
+                "appIDs": [
+                    "app.fyreplace.Fyreplace"
+                ],
+                "components": [
+                    {
+                        "/": "/*",
+                        "comment": "Matches any URL"
+                    }
+                ]
+            }
+        ]
+    },
+    "webcredentials": {
+        "apps": []
+    },
+    "appclips": {}
+}
