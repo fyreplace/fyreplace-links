@@ -1,4 +1,4 @@
-const { writeFileSync } = require("fs")
+const { writeFile } = require("fs")
 const { join } = require("path")
 const assetLinks = require("./assetlinks.template.json")
 const appSiteAssociation = require("./apple-app-site-association.template.json")
@@ -16,5 +16,8 @@ for (const detail of appSiteAssociation.applinks.details) {
     detail.appIDs = detail.appIDs.map(d => iosAppPrefix + "." + d)
 }
 
-writeFileSync(join(__dirname, "assetlinks.json"), JSON.stringify(assetLinks, null, 4))
-writeFileSync(join(__dirname, "apple-app-site-association"), JSON.stringify(appSiteAssociation, null, 4))
+const files = { "assetlinks.json": assetLinks, "apple-app-site-association": appSiteAssociation }
+
+for (const fileName in files) {
+    writeFile(join(__dirname, fileName), JSON.stringify(files[fileName], null, 4), () => undefined)
+}
