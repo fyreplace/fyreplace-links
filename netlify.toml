@@ -5,6 +5,7 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
+  status = 200
 
 [[headers]]
   for = "/.well-known/apple-app-site-association"
