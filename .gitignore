@@ -1,3 +1,5 @@
+.DS_Store
+
 .well-known/assetlinks.json
 .well-known/apple-app-site-association
 published/.well-known
