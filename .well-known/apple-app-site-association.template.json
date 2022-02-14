@@ -5,6 +5,7 @@
                 "appIDs": [
                     "app.fyreplace.Fyreplace"
                 ],
+                "appID": "app.fyreplace.Fyreplace",
                 "components": [
                     {
                         "/": "/*",
