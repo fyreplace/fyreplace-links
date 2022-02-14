@@ -7,7 +7,7 @@ const androidCertHashes = process.env.ANDROID_CERT_HASHES || ""
 const iosAppPrefix = process.env.IOS_APP_PREFIX || ""
 
 function prefixed(apps) {
-    return apps.map(app => iosAppPrefix + "." + app)
+    return apps instanceof Array ? apps.map(app => prefixed(app)) : (iosAppPrefix + "." + apps)
 }
 
 for (const link of assetLinks) {
@@ -18,6 +18,7 @@ for (const link of assetLinks) {
 
 for (const detail of appSiteAssociation.applinks.details) {
     detail.appIDs = prefixed(detail.appIDs)
+    detail.appID = prefixed(detail.appID)
 }
 
 appSiteAssociation.webcredentials.apps = prefixed(appSiteAssociation.webcredentials.apps)
