@@ -55,6 +55,20 @@
         text-align: center;
       }
 
+      .button {
+        margin-bottom: 1em;
+        padding: 0.5em 1em;
+        background: #ff8243;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.1s;
+      }
+
+      .button:hover {
+        background: #ffb243;
+      }
+
       .logo {
         width: 80px;
         height: 80px;
@@ -76,6 +90,20 @@
       />
     </svg>
     <h1>This link should be opened in the Fyreplace app</h1>
-    <p>Do you have the app installed, and is it up to date?</p>
+    <p>
+      Do you have the app installed, and is it up to date? If so, try this
+      button:
+    </p>
+    <a id="button" href="#" role="button" class="button"
+      >Open link in the app</a
+    >
+
+    <script>
+      const button = document.getElementById("button");
+      button.href = window.location
+        .toString()
+        .replace(window.location.protocol, "fyreplace:")
+        .replace(window.location.host, "");
+    </script>
   </body>
 </html>
