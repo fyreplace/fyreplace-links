@@ -3,17 +3,18 @@ const { join } = require("path")
 const assetLinks = require("./assetlinks.template.json")
 const appSiteAssociation = require("./apple-app-site-association.template.json")
 
+const androidApp = process.env.ANDROID_APP || ""
 const androidCertHashes = process.env.ANDROID_CERT_HASHES || ""
+const androidDevCertHashes = process.env.ANDROID_DEV_CERT_HASHES || ""
 const iosAppPrefix = process.env.IOS_APP_PREFIX || ""
 
 function prefixed(apps) {
     return apps instanceof Array ? apps.map(app => prefixed(app)) : (iosAppPrefix + "." + apps)
 }
 
-for (const link of assetLinks) {
-    if (link.target.sha256_cert_fingerprints) {
-        link.target.sha256_cert_fingerprints = androidCertHashes.split(",").filter(h => h)
-    }
+for (const target of assetLinks.map(l => l.target)) {
+    const hashes = target.package_name === androidApp ? androidCertHashes : androidDevCertHashes
+    target.sha256_cert_fingerprints = hashes.split(",").filter(h => h)
 }
 
 for (const detail of appSiteAssociation.applinks.details) {
