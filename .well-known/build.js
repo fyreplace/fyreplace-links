@@ -10,10 +10,8 @@ function prefixed(apps) {
     return apps instanceof Array ? apps.map(app => prefixed(app)) : (iosAppPrefix + "." + apps)
 }
 
-for (const link of assetLinks) {
-    if (link.target.sha256_cert_fingerprints) {
-        link.target.sha256_cert_fingerprints = androidCertHashes.split(",").filter(h => h)
-    }
+for (const target of assetLinks.map(l => l.target)) {
+    target.sha256_cert_fingerprints = androidCertHashes.split(",").filter(h => h)
 }
 
 for (const detail of appSiteAssociation.applinks.details) {
