@@ -8,25 +8,5 @@
             "package_name": "app.fyreplace.fyreplace",
             "sha256_cert_fingerprints": []
         }
-    },
-    {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "app.fyreplace.fyreplace.dev",
-            "sha256_cert_fingerprints": []
-        }
-    },
-    {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "app.fyreplace.fyreplace.dbg",
-            "sha256_cert_fingerprints": []
-        }
     }
 ]
