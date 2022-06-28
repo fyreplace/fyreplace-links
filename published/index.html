@@ -55,13 +55,21 @@
         text-align: center;
       }
 
+      p {
+        line-height: 1.5em;
+      }
+
+      .logo {
+        display: none;
+      }
+
       .button {
         margin-bottom: 1em;
         padding: 0.5em 1em;
         background: #ff8243;
         color: white;
         text-decoration: none;
-        border-radius: 8px;
+        border-radius: 0.5em;
         transition: 0.1s;
       }
 
@@ -69,9 +77,31 @@
         background: #ffb243;
       }
 
-      .logo {
-        width: 80px;
-        height: 80px;
+      #qr {
+        display: none;
+      }
+
+      @media (prefers-color-scheme: light) {
+        #qr {
+          box-shadow: gray 0 0 10px;
+        }
+      }
+
+      @media (min-height: 600px) {
+        .logo {
+          display: block;
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      @media (min-width: 600px) and (min-height: 600px) {
+        #qr {
+          display: block;
+          margin-top: 10px;
+          border-radius: 10px;
+          background-color: white;
+        }
       }
     </style>
   </head>
@@ -91,19 +121,30 @@
     </svg>
     <h1>This link should be opened in the Fyreplace app</h1>
     <p>
-      Do you have the app installed, and is it up to date? If so, try this
-      button:
+      Do you have the app installed, and is it up to date?
+      <br />
+      If so, try this button (or the QR code below if you are not on your
+      phone):
     </p>
     <a id="button" href="#" role="button" class="button"
       >Open link in the app</a
     >
+    <img id="qr" style="display: none" />
 
     <script>
       const button = document.getElementById("button");
+      const qr = document.getElementById("qr");
       button.href = window.location
         .toString()
         .replace(window.location.protocol, "fyreplace:")
         .replace(window.location.host, "");
+
+      if (window.location.hash.length <= 1) {
+        qr.src =
+          "https://api.qrserver.com/v1/create-qr-code/?size=300x300&qzone=2&data=" +
+          encodeURIComponent(button.href);
+        qr.style.display = "";
+      }
     </script>
   </body>
 </html>
