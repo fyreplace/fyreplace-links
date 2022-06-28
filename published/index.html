@@ -77,27 +77,31 @@
         background: #ffb243;
       }
 
-      #qr {
+      .hidden,
+      .hidden-small-device {
         display: none;
       }
 
       @media (prefers-color-scheme: light) {
-        #qr {
+        .qr {
           box-shadow: gray 0 0 10px;
         }
       }
 
       @media (min-height: 600px) {
         .logo {
-          display: block;
+          display: unset;
           width: 80px;
           height: 80px;
         }
       }
 
       @media (min-width: 600px) and (min-height: 600px) {
-        #qr {
-          display: block;
+        .hidden-small-device:not(.hidden) {
+          display: unset;
+        }
+
+        .qr {
           margin-top: 10px;
           border-radius: 10px;
           background-color: white;
@@ -123,13 +127,14 @@
     <p>
       Do you have the app installed, and is it up to date?
       <br />
-      If so, try this button (or the QR code below if you are not on your
-      phone):
+      If so, try this button<span class="hidden hidden-small-device">
+        (or the QR code below if you are not on your phone)</span
+      >:
     </p>
     <a id="button" href="#" role="button" class="button"
       >Open link in the app</a
     >
-    <img id="qr" style="display: none" />
+    <img id="qr" class="qr hidden hidden-small-device" />
 
     <script>
       const button = document.getElementById("button");
@@ -143,7 +148,13 @@
         qr.src =
           "https://api.qrserver.com/v1/create-qr-code/?size=300x300&qzone=2&data=" +
           encodeURIComponent(button.href);
-        qr.style.display = "";
+
+        var hiddenElements = [];
+
+        do {
+          hiddenElements = document.getElementsByClassName("hidden");
+          hiddenElements[0].classList.remove("hidden");
+        } while (hiddenElements.length > 0);
       }
     </script>
   </body>
