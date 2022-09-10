@@ -20,7 +20,9 @@
         ]
     },
     "webcredentials": {
-        "apps": []
+        "apps": [
+            "app.fyreplace.Fyreplace"
+        ]
     },
     "appclips": {
         "apps": []
