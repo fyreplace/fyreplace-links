@@ -1,11 +1,15 @@
-.PHONY: all build publish
+.PHONY: all well-known dependencies build
 
-all: build publish
+all: well-known dependencies build
+
+well-known:
+	node .well-known/build.js
+	mkdir -p public/.well-known
+	cp -r .well-known/apple-app-site-association public/.well-known/
+	cp -r .well-known/assetlinks.json public/.well-known/
+
+dependencies:
+	npm ci
 
 build:
-	@node .well-known/build.js
-
-publish:
-	@mkdir -p published/.well-known
-	@cp .well-known/assetlinks.json published/.well-known
-	@cp .well-known/apple-app-site-association published/.well-known
+	npm run generate

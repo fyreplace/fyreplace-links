@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { writeFile } = require("fs")
 const { join } = require("path")
 const assetLinks = require("./assetlinks.template.json")
