@@ -4,5 +4,5 @@
 /*
     X-Frame-Options: DENY
     X-Content-Type-Options: nosniff
-    Content-Security-Policy: default-src 'self'; frame-src 'none'; frame-ancestors 'none'; style-src https:; script-src https:; img-src https:
+    Content-Security-Policy: default-src 'self'; frame-src 'none'; frame-ancestors 'none'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-inline' 'self'; img-src https:
     Referrer-Policy: no-referrer
