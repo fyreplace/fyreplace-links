@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       "width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover",
     meta: [
       {
-        "http-equiv": "X-UA-Compatible",
+        "http-equiv": "x-ua-compatible",
         content: "IE=edge",
       },
       {
