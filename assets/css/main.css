@@ -1,6 +1,6 @@
 :root {
-  --color-accent: #ff8243;
-  --color-accent-hover: #ffb243;
+  --color-accent: coral;
+  --color-accent-hover: orange;
 }
 
 html,
