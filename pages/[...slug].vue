@@ -17,20 +17,10 @@
   </main>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  computed: {
-    showQrCode(): boolean {
-      return this.$route.hash.length <= 1
-    },
-
-    destination(): string {
-      return `fyreplace://${this.$route.path}`
-    }
-  }
-})
+<script setup lang="ts">
+const route = useRoute()
+const showQrCode = computed(() => route.hash.length <= 1)
+const destination = computed(() => `fyreplace://${route.path}`)
 </script>
 
 <style scoped>

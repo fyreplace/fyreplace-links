@@ -4,15 +4,11 @@
   </nuxt-link>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  props: {
-    href: {
-      type: String,
-      default: '#'
-    }
+<script setup lang="ts">
+defineProps({
+  href: {
+    type: String,
+    default: '#'
   }
 })
 </script>
