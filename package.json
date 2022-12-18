@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "nuxt": "^3.0.0",
-    "vue-tsc": "^1.0.12"
+    "vue-tsc": "^1.0.13"
   }
 }
