@@ -23,37 +23,37 @@ export default defineNuxtConfig({
         },
         {
           name: "msapplication-TileImage",
-          content: "/mstile-144x144.png",
+          content: "/mstile-144x144.png?v=1.3.0",
         },
       ],
       link: [
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "/favicon.ico?v=1",
+          href: "/favicon.ico?v=1.3.0",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "32x32",
-          href: "/favicon-32x32.png?v=1",
+          href: "/favicon-32x32.png?v=1.3.0",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
-          href: "/favicon-16x16.png?v=1",
+          href: "/favicon-16x16.png?v=1.3.0",
         },
         {
           rel: "apple-touch-icon",
           type: "image/png",
           sizes: "180x180",
-          href: "/apple-touch-icon.png?v=1",
+          href: "/apple-touch-icon.png?v=1.3.0",
         },
         {
           rel: "mask-icon",
           type: "image/svg",
-          href: "/safari-pinned-tab.svg?v=1",
+          href: "/safari-pinned-tab.svg?v=1.3.0",
           color: "#FF8243",
         },
         {
