@@ -9,8 +9,8 @@
     "postinstall": "nuxt prepare; make well-known"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9",
-    "nuxt": "^3.8.0",
-    "vue-tsc": "^1.8.21"
+    "@types/node": "^20.11.5",
+    "nuxt": "^3.9.3",
+    "vue-tsc": "^1.8.27"
   }
 }
