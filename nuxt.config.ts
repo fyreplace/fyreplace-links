@@ -1,8 +1,5 @@
 export default defineNuxtConfig({
   css: ["@/assets/css/main.css"],
-  typescript: {
-    typeCheck: true,
-  },
   app: {
     head: {
       title: "Fyreplace",
