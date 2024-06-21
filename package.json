@@ -6,11 +6,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare; make well-known"
+    "postinstall": "nuxt prepare && make"
   },
   "devDependencies": {
-    "@types/node": "^20.11.5",
-    "nuxt": "^3.9.3",
+    "@types/node": "^20.14.7",
+    "nuxt": "^3.12.2",
     "vue-tsc": "^1.8.27"
   }
 }
