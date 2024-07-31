@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   css: ["@/assets/css/main.css"],
+
   app: {
     head: {
       title: "Fyreplace",
@@ -20,85 +21,85 @@ export default defineNuxtConfig({
         },
         {
           name: "msapplication-TileImage",
-          content: "/mstile-144x144.png?v=1.6.0",
+          content: "/mstile-144x144.png?v=1.16.12",
         },
       ],
       link: [
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "/favicon.ico?v=1.6.0",
+          href: "/favicon.ico?v=1.16.12",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "48x48",
-          href: "/favicon-32x32.png?v=1.6.0",
+          href: "/favicon-32x32.png?v=1.16.12",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "32x32",
-          href: "/favicon-32x32.png?v=1.6.0",
+          href: "/favicon-32x32.png?v=1.16.12",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
-          href: "/favicon-16x16.png?v=1.6.0",
+          href: "/favicon-16x16.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon",
           type: "image/png",
           sizes: "180x180",
-          href: "/apple-touch-icon-180x180.png?v=1.6.0",
+          href: "/apple-touch-icon-180x180.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon",
           type: "image/png",
           sizes: "167x167",
-          href: "/apple-touch-icon-167x167.png?v=1.6.0",
+          href: "/apple-touch-icon-167x167.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon",
           type: "image/png",
           sizes: "152x152",
-          href: "/apple-touch-icon-152x152.png?v=1.6.0",
+          href: "/apple-touch-icon-152x152.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon",
           type: "image/png",
           sizes: "120x120",
-          href: "/apple-touch-icon-120x120.png?v=1.6.0",
+          href: "/apple-touch-icon-120x120.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon-precomposed",
           type: "image/png",
           sizes: "180x180",
-          href: "/apple-touch-icon-180x180.png?v=1.6.0",
+          href: "/apple-touch-icon-180x180.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon-precomposed",
           type: "image/png",
           sizes: "167x167",
-          href: "/apple-touch-icon-167x167.png?v=1.6.0",
+          href: "/apple-touch-icon-167x167.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon-precomposed",
           type: "image/png",
           sizes: "152x152",
-          href: "/apple-touch-icon-152x152.png?v=1.6.0",
+          href: "/apple-touch-icon-152x152.png?v=1.16.12",
         },
         {
           rel: "apple-touch-icon-precomposed",
           type: "image/png",
           sizes: "120x120",
-          href: "/apple-touch-icon-120x120.png?v=1.6.0",
+          href: "/apple-touch-icon-120x120.png?v=1.16.12",
         },
         {
           rel: "mask-icon",
           type: "image/svg",
-          href: "/safari-pinned-tab.svg?v=1.6.0",
+          href: "/safari-pinned-tab.svg?v=1.16.12",
           color: "coral",
         },
         {
@@ -108,4 +109,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-07-31",
 });
