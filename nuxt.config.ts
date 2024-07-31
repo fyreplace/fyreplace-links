@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   css: ["@/assets/css/main.css"],
+
   app: {
     head: {
       title: "Fyreplace",
@@ -108,4 +109,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-07-31",
 });
