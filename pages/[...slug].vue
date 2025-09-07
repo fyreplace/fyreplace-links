@@ -20,7 +20,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const showQrCode = computed(() => route.hash.length <= 1)
-const destination = computed(() => `fyreplace://${route.path}`)
+const destination = computed(() => `fyreplace://${route.path}${route.hash}`)
 </script>
 
 <style scoped>
