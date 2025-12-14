@@ -1,0 +1,7 @@
+{
+	"name": "Development",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+	"features": {},
+	"forwardPorts": [3000],
+	"postCreateCommand": "npm ci"
+}
