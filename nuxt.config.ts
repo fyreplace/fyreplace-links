@@ -73,32 +73,7 @@ export default defineNuxtConfig({
           href: "/apple-touch-icon-120x120.png?v=1.20.0",
         },
         {
-          rel: "apple-touch-icon-precomposed",
-          type: "image/png",
-          sizes: "180x180",
-          href: "/apple-touch-icon-180x180.png?v=1.20.0",
-        },
-        {
-          rel: "apple-touch-icon-precomposed",
-          type: "image/png",
-          sizes: "167x167",
-          href: "/apple-touch-icon-167x167.png?v=1.20.0",
-        },
-        {
-          rel: "apple-touch-icon-precomposed",
-          type: "image/png",
-          sizes: "152x152",
-          href: "/apple-touch-icon-152x152.png?v=1.20.0",
-        },
-        {
-          rel: "apple-touch-icon-precomposed",
-          type: "image/png",
-          sizes: "120x120",
-          href: "/apple-touch-icon-120x120.png?v=1.20.0",
-        },
-        {
           rel: "mask-icon",
-          type: "image/svg",
           href: "/safari-pinned-tab.svg?v=1.20.0",
           color: "coral",
         },
@@ -110,5 +85,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2024-07-31",
+  compatibilityDate: "2025-07-15",
 });
