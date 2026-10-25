@@ -1,5 +1,6 @@
 {
   "name": "fyreplace-links",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -9,8 +10,9 @@
     "postinstall": "nuxt prepare && make"
   },
   "devDependencies": {
-    "@types/node": "^24",
-    "nuxt": "^3",
+    "@types/node": "^26",
+    "nuxt": "^4",
+    "typescript": "^6",
     "vue-tsc": "^3"
   }
 }
